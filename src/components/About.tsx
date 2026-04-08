@@ -11,9 +11,9 @@ export const About = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-accent-gold text-sm font-bold tracking-widest uppercase mb-6">Về chúng tôi</h2>
+          <h2 className="text-[#30BBFD] text-sm font-bold tracking-widest uppercase mb-6">Về chúng tôi</h2>
           <p className="text-3xl md:text-5xl font-heading font-bold leading-tight mb-10 text-gray-900 text-balance">
-            CHÚNG TÔI LÀ NHỮNG NGƯỜI <span className="text-accent-gold">SÁNG TẠO</span>,
+            CHÚNG TÔI LÀ NHỮNG NGƯỜI <span className="text-[#30BBFD]">SÁNG TẠO</span>,
             TẬN TÂM VÀ LUÔN ĐỔI MỚI.
           </p>
           <p className="text-lg md:text-xl font-body text-gray-600 leading-relaxed max-w-2xl mx-auto">
@@ -26,3 +26,4 @@ export const About = () => {
     </section>
   );
 };
+

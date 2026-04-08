@@ -27,7 +27,7 @@ export const Navbar = () => {
     <nav
       className={cn(
         "fixed top-0 left-0 w-full z-50 transition-all duration-500",
-        isScrolled ? "bg-white/95 backdrop-blur-md py-4 shadow-sm" : "bg-white/80 py-8"
+        isScrolled ? "bg-white/95 backdrop-blur-md py-4 shadow-sm" : "bg-transparent py-8"
       )}
     >
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
@@ -45,7 +45,12 @@ export const Navbar = () => {
             <a
               key={link.name}
               href={link.href}
-              className="text-sm uppercase font-medium tracking-wider text-gray-600 hover:text-accent-gold transition-colors duration-300"
+              className={cn(
+                "text-sm uppercase font-medium tracking-wider transition-colors duration-300",
+                isScrolled 
+                  ? "text-gray-600 hover:text-[#30BBFD]" 
+                  : "text-white hover:text-[#30BBFD]"
+              )}
             >
               {link.name}
             </a>
@@ -54,7 +59,7 @@ export const Navbar = () => {
 
         {/* Mobile Menu Toggle */}
         <button
-          className="md:hidden text-gray-900"
+          className={cn("md:hidden", isScrolled ? "text-gray-900" : "text-white")}
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
@@ -88,3 +93,4 @@ export const Navbar = () => {
     </nav>
   );
 };
+

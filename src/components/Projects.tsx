@@ -11,8 +11,8 @@ export const Projects = () => {
     <section id="projects" className="py-28 px-6 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-20">
-          <h2 className="text-accent-gold text-sm font-bold tracking-widest uppercase mb-4">Dự án tiêu biểu</h2>
-          <h3 className="text-4xl md:text-6xl font-heading font-bold text-gray-900">NHỮNG <span className="text-accent-gold">KIỆT TÁC</span> SÁNG TẠO</h3>
+          <h2 className="text-[#30BBFD] text-sm font-bold tracking-widest uppercase mb-4">Dự án tiêu biểu</h2>
+          <h3 className="text-4xl md:text-6xl font-heading font-bold text-gray-900">NHỮNG <span className="text-[#30BBFD]">KIỆT TÁC</span> SÁNG TẠO</h3>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -38,7 +38,7 @@ export const Projects = () => {
                   whileInView={{ y: 0, opacity: 1 }}
                   transition={{ duration: 0.5 }}
                 >
-                  <p className="text-accent-gold text-sm font-bold tracking-widest uppercase mb-2">
+                  <p className="text-[#30BBFD] text-sm font-bold tracking-widest uppercase mb-2">
                     {project.category}
                   </p>
                   <h4 className="text-2xl font-heading font-bold text-white">
@@ -64,3 +64,4 @@ export const Projects = () => {
     </section>
   );
 };
+

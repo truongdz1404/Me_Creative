@@ -30,9 +30,9 @@ export const Testimonials = () => {
     <section id="testimonials" className="py-28 px-6 bg-gray-50 border-t border-b border-gray-200 overflow-hidden\">
       <div className="max-w-5xl mx-auto relative">
         <div className="text-center mb-16">
-          <Quote size={60} className="text-accent-gold/20 mx-auto mb-8" />
-          <h2 className="text-accent-gold text-sm font-bold tracking-widest uppercase mb-4">Khách hàng nói gì</h2>
-          <h3 className="text-4xl md:text-6xl font-heading font-bold text-gray-900">LỜI <span className="text-accent-gold">KHẲNG ĐỊNH</span></h3>
+          <Quote size={60} className="text-[#30BBFD]/20 mx-auto mb-8" />
+          <h2 className="text-[#30BBFD] text-sm font-bold tracking-widest uppercase mb-4">Khách hàng nói gì</h2>
+          <h3 className="text-4xl md:text-6xl font-heading font-bold text-gray-900">LỜI <span className="text-[#30BBFD]">KHẲNG ĐỊNH</span></h3>
         </div>
 
         <div className="relative h-[400px] md:h-[300px]">
@@ -52,7 +52,7 @@ export const Testimonials = () => {
                 <h4 className="text-xl font-heading font-bold text-gray-900 mb-1">
                   {testimonials[currentIndex].name}
                 </h4>
-                <p className="text-accent-gold text-sm font-bold tracking-widest uppercase">
+                <p className="text-[#30BBFD] text-sm font-bold tracking-widest uppercase">
                   {testimonials[currentIndex].position}
                 </p>
               </div>
@@ -79,3 +79,4 @@ export const Testimonials = () => {
     </section>
   );
 };
+

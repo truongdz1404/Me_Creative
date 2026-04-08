@@ -9,8 +9,8 @@ export const Team = () => {
     <section id="team" className="py-28 px-6 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-20">
-          <h2 className="text-accent-gold text-sm font-bold tracking-widest uppercase mb-4">Đội ngũ</h2>
-          <h3 className="text-4xl md:text-6xl font-heading font-bold text-gray-900">NHỮNG NGƯỜI <span className="text-accent-gold">DẪN ĐẦU</span></h3>
+          <h2 className="text-[#30BBFD] text-sm font-bold tracking-widest uppercase mb-4">Đội ngũ</h2>
+          <h3 className="text-4xl md:text-6xl font-heading font-bold text-gray-900">NHỮNG NGƯỜI <span className="text-[#30BBFD]">DẪN ĐẦU</span></h3>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -33,7 +33,7 @@ export const Team = () => {
               </div>
               <div className="p-8 text-center">
                 <h4 className="text-xl font-heading font-bold mb-2 text-gray-900">{member.name}</h4>
-                <p className="text-accent-gold text-sm font-bold tracking-widest uppercase mb-4">
+                <p className="text-[#30BBFD] text-sm font-bold tracking-widest uppercase mb-4">
                   {member.position}
                 </p>
                 <p className="text-gray-600 italic text-sm font-body">
@@ -47,3 +47,4 @@ export const Team = () => {
     </section>
   );
 };
+

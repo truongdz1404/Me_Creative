@@ -37,13 +37,13 @@ export const ProjectDetail = () => {
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <button
             onClick={() => navigate("/#projects")}
-            className="flex items-center gap-2 text-gray-900 hover:text-accent-gold transition-colors"
+            className="flex items-center gap-2 text-gray-900 hover:text-[#30BBFD] transition-colors"
           >
             <ChevronLeft size={24} />
             <span className="font-semibold">Quay lại</span>
           </button>
           <div className="text-center">
-            <p className="text-xs text-accent-gold uppercase font-bold tracking-widest">{project.category}</p>
+            <p className="text-xs text-[#30BBFD] uppercase font-bold tracking-widest">{project.category}</p>
             <h1 className="text-lg font-heading font-bold">{project.title}</h1>
           </div>
           <div className="w-24" />
@@ -85,7 +85,7 @@ export const ProjectDetail = () => {
             >
               <div className="flex justify-between items-start gap-8 mb-8">
                 <div>
-                  <p className="text-accent-gold text-sm font-bold tracking-widest uppercase mb-3">
+                  <p className="text-[#30BBFD] text-sm font-bold tracking-widest uppercase mb-3">
                     {project.category}
                   </p>
                   <h1 className="text-5xl md:text-6xl font-heading font-bold text-gray-900 mb-4">
@@ -97,7 +97,7 @@ export const ProjectDetail = () => {
                   <p className="text-gray-600 mb-1">Khách hàng</p>
                   <p className="text-2xl font-bold text-gray-900 mb-4">{project.client}</p>
                   <p className="text-gray-600 mb-1">Năm</p>
-                  <p className="text-2xl font-bold text-accent-gold">{project.year}</p>
+                  <p className="text-2xl font-bold text-[#30BBFD]">{project.year}</p>
                 </div>
               </div>
             </motion.div>
@@ -230,8 +230,8 @@ export const ProjectDetail = () => {
                 className="group cursor-pointer"
                 onClick={() => navigate(`/project/${prevProject.id}`)}
               >
-                <p className="text-accent-gold text-sm font-bold uppercase mb-2">Dự Án Trước</p>
-                <h3 className="text-2xl font-heading font-bold text-gray-900 group-hover:text-accent-gold transition-colors">
+                <p className="text-[#30BBFD] text-sm font-bold uppercase mb-2">Dự Án Trước</p>
+                <h3 className="text-2xl font-heading font-bold text-gray-900 group-hover:text-[#30BBFD] transition-colors">
                   {prevProject.title}
                 </h3>
               </motion.div>
@@ -244,8 +244,8 @@ export const ProjectDetail = () => {
                 className="group cursor-pointer text-right md:text-right"
                 onClick={() => navigate(`/project/${nextProject.id}`)}
               >
-                <p className="text-accent-gold text-sm font-bold uppercase mb-2">Dự Án Tiếp Theo</p>
-                <h3 className="text-2xl font-heading font-bold text-gray-900 group-hover:text-accent-gold transition-colors inline-flex items-center gap-2">
+                <p className="text-[#30BBFD] text-sm font-bold uppercase mb-2">Dự Án Tiếp Theo</p>
+                <h3 className="text-2xl font-heading font-bold text-gray-900 group-hover:text-[#30BBFD] transition-colors inline-flex items-center gap-2">
                   {nextProject.title}
                   <ArrowRight size={24} className="group-hover:translate-x-2 transition-transform" />
                 </h3>
@@ -257,3 +257,4 @@ export const ProjectDetail = () => {
     </div>
   );
 };
+

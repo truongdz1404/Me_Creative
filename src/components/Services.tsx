@@ -4,22 +4,22 @@ import { Camera, Palette, Globe, Megaphone } from "lucide-react";
 
 const services = [
   {
-    icon: <Megaphone size={40} className="text-accent-gold" />,
+    icon: <Megaphone size={40} className="text-[#30BBFD]" />,
     title: "ME Commerce",
     description: "Xây dựng kế hoạch tổng thể và các giải pháp thương mại điện tử cho các doanh nghiệp bán lẻ trên các nền tảng, sàn thương mại điện tử.",
   },
   {
-    icon: <Camera size={40} className="text-accent-gold" />,
+    icon: <Camera size={40} className="text-[#30BBFD]" />,
     title: "Me Talents",
     description: "Hệ thống talent độc quyền kết hợp giải pháp Influencer Marketing sáng tạo, giúp thương hiệu lan tỏa mạnh mẽ và xây dựng cộng đồng người hâm mộ trung thành.",
   },
   {
-    icon: <Palette size={40} className="text-accent-gold" />,
+    icon: <Palette size={40} className="text-[#30BBFD]" />,
     title: "Truyền Thông Tiếp Thị",
     description: "Xây dựng chiến lược truyền thông sáng tạo, đa kênh và nhất quán – từ IMC, branding, ra mắt sản phẩm đến social media.",
   },
   {
-    icon: <Globe size={40} className="text-accent-gold" />,
+    icon: <Globe size={40} className="text-[#30BBFD]" />,
     title: "Sản Xuất Nội Dung",
     description: "Sản xuất trọn gói các loại nội dung: TVC, Music Video (MV), Phim doanh nghiệp, 2D/3D animation, Key Visual, bộ ảnh sản phẩm, nội dung trên các kênh MXH.",
   },
@@ -30,8 +30,8 @@ export const Services = () => {
     <section id="services" className="py-28 px-6 bg-gray-50">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-20">
-          <h2 className="text-accent-gold text-sm font-bold tracking-widest uppercase mb-4">Dịch vụ</h2>
-          <h3 className="text-4xl md:text-6xl font-heading font-bold text-gray-900">GIẢI PHÁP <span className="text-accent-gold">TOÀN DIỆN</span></h3>
+          <h2 className="text-[#30BBFD] text-sm font-bold tracking-widest uppercase mb-4">Dịch vụ</h2>
+          <h3 className="text-4xl md:text-6xl font-heading font-bold text-gray-900">GIẢI PHÁP <span className="text-[#30BBFD]">TOÀN DIỆN</span></h3>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -57,3 +57,4 @@ export const Services = () => {
     </section>
   );
 };
+

@@ -30,14 +30,14 @@ export const Hero = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8 }}
-            className="text-5xl md:text-7xl font-heading font-bold leading-tight text-white mb-6"
+            className="text-6xl md:text-8xl lg:text-9xl font-heading font-black leading-tight text-white mb-6 tracking-tighter"
           >
             <motion.span
               animate={{ x: [0, 10, 0] }}
               transition={{ duration: 3, repeat: Infinity }}
               className="inline-block"
             >
-              <span className="text-accent-gold">M</span>aster creativity
+              <span className="text-[#30BBFD]">M</span>aster creativity
             </motion.span>
           </motion.h1>
 
@@ -45,14 +45,14 @@ export const Hero = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-4xl md:text-6xl font-heading font-bold leading-tight text-white mt-4"
+            className="text-5xl md:text-7xl lg:text-8xl font-heading font-black leading-tight text-white mt-4 tracking-tighter"
           >
             <motion.span
               animate={{ x: [0, -10, 0] }}
               transition={{ duration: 3, repeat: Infinity }}
               className="inline-block"
             >
-              <span className="text-pink-500">E</span>nhance success
+              <span className="text-[#FF23FD]">E</span>nhance success
             </motion.span>
           </motion.h2>
         </div>
@@ -75,7 +75,7 @@ export const Hero = () => {
           className="flex flex-col items-center space-y-4"
         >
           <div className="flex items-center space-x-3">
-            <span className="text-accent-gold font-bold text-lg">Đánh Giá Khách Hàng</span>
+            <span className="text-[#30BBFD] font-bold text-lg">Đánh Giá Khách Hàng</span>
             <span className="text-white text-sm tracking-widest uppercase">→</span>
           </div>
           <div className="flex items-center space-x-4">
@@ -85,7 +85,7 @@ export const Hero = () => {
                 <Star
                   key={i}
                   size={20}
-                  className="fill-accent-gold text-accent-gold"
+                  className="fill-[#30BBFD] text-[#30BBFD]"
                 />
               ))}
             </div>
@@ -105,3 +105,4 @@ export const Hero = () => {
     </section>
   );
 };
+

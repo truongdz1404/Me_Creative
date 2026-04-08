@@ -4,27 +4,27 @@ import { Lightbulb, ThumbsUp, Grid3x3, Video, Zap, Shield } from "lucide-react";
 
 const commitments = [
   {
-    icon: <Zap size={48} className="text-accent-gold" />,
+    icon: <Zap size={48} className="text-[#30BBFD]" />,
     title: "Sáng tạo không giới hạn",
     description: "ME Creative theo đuổi tư duy mở – nơi mọi ý tưởng đều được bứt phá, không khuôn mẫu, không rào cản.",
   },
   {
-    icon: <Lightbulb size={48} className="text-accent-gold" />,
+    icon: <Lightbulb size={48} className="text-[#30BBFD]" />,
     title: "Khác biệt đến từ bản sắc riêng",
     description: "Chúng tôi khai thác chiều sâu văn hóa, cảm xúc và cá tính thương hiệu riêng có để tạo ra sự khác biệt bền vững.",
   },
   {
-    icon: <ThumbsUp size={48} className="text-accent-gold" />,
+    icon: <ThumbsUp size={48} className="text-[#30BBFD]" />,
     title: "Tư duy tổng thể - Giải pháp trọn vẹn",
     description: "ME Creative biến ý tưởng thành giá trị thực – bằng tư duy chiến lược vững vàng và quy trình sản xuất chuyên nghiệp.",
   },
   {
-    icon: <Grid3x3 size={48} className="text-accent-gold" />,
+    icon: <Grid3x3 size={48} className="text-[#30BBFD]" />,
     title: "Nghệ thuật là ngôn ngữ kết nối",
     description: "Chúng tôi kể câu chuyện thương hiệu bằng hình ảnh, cảm xúc và trải nghiệm mang tính nghệ thuật.",
   },
   {
-    icon: <Video size={48} className="text-accent-gold" />,
+    icon: <Video size={48} className="text-[#30BBFD]" />,
     title: "Thấu hiểu - Linh hoạt - Hiệu quả",
     description: "Chúng tôi lắng nghe và thấu hiểu từng mong muốn của khách hàng, linh hoạt thích ứng để mang lại hiệu quả tối ưu.",
   },
@@ -91,3 +91,4 @@ export const Commitment = () => {
     </section>
   );
 };
+

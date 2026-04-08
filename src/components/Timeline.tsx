@@ -13,8 +13,8 @@ export const Timeline = () => {
     <section id="timeline" className="py-28 px-6 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-20">
-          <h2 className="text-accent-gold text-sm font-bold tracking-widest uppercase mb-4">Hành trình</h2>
-          <h3 className="text-4xl md:text-6xl font-heading font-bold text-gray-900">CỘT MỐC <span className="text-accent-gold">PHÁT TRIỂN</span></h3>
+          <h2 className="text-[#30BBFD] text-sm font-bold tracking-widest uppercase mb-4">Hành trình</h2>
+          <h3 className="text-4xl md:text-6xl font-heading font-bold text-gray-900">CỘT MỐC <span className="text-[#30BBFD]">PHÁT TRIỂN</span></h3>
         </div>
 
         <div className="relative">
@@ -35,7 +35,7 @@ export const Timeline = () => {
                 {/* Content */}
                 <div className="w-full md:w-1/2 p-4 md:p-8 text-center md:text-left">
                   <div className={`flex flex-col ${index % 2 === 0 ? "md:items-end" : "md:items-start"}`}>
-                    <span className="text-4xl md:text-6xl font-heading font-bold text-accent-gold mb-4">
+                    <span className="text-4xl md:text-6xl font-heading font-bold text-[#30BBFD] mb-4">
                       {item.year}
                     </span>
                     <h4 className="text-xl font-heading font-bold mb-4 text-gray-900">{item.title}</h4>
@@ -60,3 +60,4 @@ export const Timeline = () => {
     </section>
   );
 };
+
