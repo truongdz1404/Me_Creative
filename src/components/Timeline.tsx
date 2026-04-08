@@ -10,11 +10,11 @@ const timelineData = [
 
 export const Timeline = () => {
   return (
-    <section id="timeline" className="py-28 px-6 bg-black">
+    <section id="timeline" className="py-28 px-6 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-20">
           <h2 className="text-accent-gold text-sm font-bold tracking-widest uppercase mb-4">Hành trình</h2>
-          <h3 className="text-4xl md:text-6xl font-heading font-bold">CỘT MỐC <span className="text-accent-gold">PHÁT TRIỂN</span></h3>
+          <h3 className="text-4xl md:text-6xl font-heading font-bold text-gray-900">CỘT MỐC <span className="text-accent-gold">PHÁT TRIỂN</span></h3>
         </div>
 
         <div className="relative">
@@ -29,9 +29,8 @@ export const Timeline = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
-                className={`flex flex-col md:flex-row items-center ${
-                  index % 2 === 0 ? "md:flex-row-reverse" : ""
-                }`}
+                className={`flex flex-col md:flex-row items-center ${index % 2 === 0 ? "md:flex-row-reverse" : ""
+                  }`}
               >
                 {/* Content */}
                 <div className="w-full md:w-1/2 p-4 md:p-8 text-center md:text-left">
@@ -39,8 +38,8 @@ export const Timeline = () => {
                     <span className="text-4xl md:text-6xl font-heading font-bold text-accent-gold mb-4">
                       {item.year}
                     </span>
-                    <h4 className="text-xl font-heading font-bold mb-4">{item.title}</h4>
-                    <p className="text-secondary-medium font-body leading-relaxed max-w-sm">
+                    <h4 className="text-xl font-heading font-bold mb-4 text-gray-900">{item.title}</h4>
+                    <p className="text-gray-600 font-body leading-relaxed max-w-sm">
                       {item.description}
                     </p>
                   </div>

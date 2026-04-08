@@ -27,12 +27,16 @@ export const Navbar = () => {
     <nav
       className={cn(
         "fixed top-0 left-0 w-full z-50 transition-all duration-500",
-        isScrolled ? "bg-black/80 backdrop-blur-md py-4" : "bg-transparent py-8"
+        isScrolled ? "bg-white/95 backdrop-blur-md py-4 shadow-sm" : "bg-white/80 py-8"
       )}
     >
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
-        <a href="#home" className="text-2xl font-heading font-bold tracking-widest text-white">
-          ME<span className="text-accent-gold">.</span>CREATIVE
+        <a href="#home" className="flex items-center">
+          <img 
+            src="https://mecreative.com.vn/wp-content/uploads/2025/08/cropped-LOGO-ME-CREATIVE-FINAL-TACH-NEN-02-scaled-2-1024x500.png" 
+            alt="ME Creative Logo" 
+            className="h-12 w-auto object-contain"
+          />
         </a>
 
         {/* Desktop Menu */}
@@ -41,7 +45,7 @@ export const Navbar = () => {
             <a
               key={link.name}
               href={link.href}
-              className="text-sm uppercase font-medium tracking-wider text-white/70 hover:text-accent-gold transition-colors duration-300"
+              className="text-sm uppercase font-medium tracking-wider text-gray-600 hover:text-accent-gold transition-colors duration-300"
             >
               {link.name}
             </a>
@@ -50,7 +54,7 @@ export const Navbar = () => {
 
         {/* Mobile Menu Toggle */}
         <button
-          className="md:hidden text-white"
+          className="md:hidden text-gray-900"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
@@ -64,14 +68,14 @@ export const Navbar = () => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="absolute top-full left-0 w-full bg-secondary-dark border-t border-white/10 md:hidden"
+            className="absolute top-full left-0 w-full bg-white border-t border-gray-200 md:hidden"
           >
             <div className="flex flex-col p-6 space-y-4">
               {navLinks.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
-                  className="text-lg uppercase font-medium tracking-wider text-white"
+                  className="text-lg uppercase font-medium tracking-wider text-gray-900"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {link.name}

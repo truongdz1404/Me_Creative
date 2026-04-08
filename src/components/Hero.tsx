@@ -1,42 +1,96 @@
 import React from "react";
 import { motion } from "motion/react";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Star } from "lucide-react";
 
 export const Hero = () => {
   return (
-    <section id="home" className="relative h-screen w-full flex items-center justify-center overflow-hidden">
-      {/* Background Image with Overlay */}
-      <div className="absolute inset-0 z-0">
-        <img
-          src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80"
-          alt="Creative Agency Background"
-          className="w-full h-full object-cover"
-          referrerPolicy="no-referrer"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black"></div>
+    <section id="home" className="relative h-screen w-full flex items-center justify-center overflow-hidden bg-black">
+      {/* YouTube Video Background */}
+      <div className="absolute inset-0 z-0 w-full h-full">
+        <div className="relative w-full h-full overflow-hidden">
+          <iframe
+            className="absolute inset-0 w-full h-full"
+            src="https://www.youtube.com/embed/l1yYSuezN1w?controls=0&rel=0&playsinline=1&cc_load_policy=0&enablejsapi=1&mute=1&autoplay=1&loop=1&playlist=l1yYSuezN1w"
+            title="ME Creative Showreel 2025"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+            referrerPolicy="strict-origin-when-cross-origin"
+          ></iframe>
+        </div>
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/40"></div>
       </div>
 
       {/* Content */}
-      <div className="relative z-10 text-center px-6 max-w-5xl">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-        >
-          <h1 className="text-5xl md:text-8xl font-heading font-bold mb-4 leading-tight">
-            MASTER <span className="text-accent-gold">CREATIVITY</span>
-          </h1>
-          <p className="text-lg md:text-2xl font-body text-secondary-light/80 mb-12 tracking-widest uppercase">
-            Nâng tầm thành công cho thương hiệu của bạn
-          </p>
-          
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="px-10 py-4 border border-accent-gold text-accent-gold rounded-full uppercase font-bold tracking-widest hover:bg-accent-gold hover:text-black transition-all duration-300"
+      <div className="relative z-10 w-full h-full flex flex-col items-center justify-center px-6">
+        {/* Animated Text with Scroll Effect */}
+        <div className="text-center mb-12">
+          <motion.h1
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8 }}
+            className="text-5xl md:text-7xl font-heading font-bold leading-tight text-white mb-6"
           >
-            Xem thêm
-          </motion.button>
+            <motion.span
+              animate={{ x: [0, 10, 0] }}
+              transition={{ duration: 3, repeat: Infinity }}
+              className="inline-block"
+            >
+              <span className="text-accent-gold">M</span>aster creativity
+            </motion.span>
+          </motion.h1>
+
+          <motion.h2
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-4xl md:text-6xl font-heading font-bold leading-tight text-white mt-4"
+          >
+            <motion.span
+              animate={{ x: [0, -10, 0] }}
+              transition={{ duration: 3, repeat: Infinity }}
+              className="inline-block"
+            >
+              <span className="text-pink-500">E</span>nhance success
+            </motion.span>
+          </motion.h2>
+        </div>
+
+        {/* Description */}
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="text-lg md:text-xl text-white/90 max-w-2xl mb-12 leading-relaxed"
+        >
+          Me Creative là Creative Advertising Agency tiên phong tạo ra các giải pháp quảng cáo và truyền thông mang tính sáng tạo độc bản
+        </motion.p>
+
+        {/* Customer Rating Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="flex flex-col items-center space-y-4"
+        >
+          <div className="flex items-center space-x-3">
+            <span className="text-accent-gold font-bold text-lg">Đánh Giá Khách Hàng</span>
+            <span className="text-white text-sm tracking-widest uppercase">→</span>
+          </div>
+          <div className="flex items-center space-x-4">
+            <span className="text-white font-heading text-2xl font-bold">4.9 out of 5</span>
+            <div className="flex space-x-1">
+              {[...Array(5)].map((_, i) => (
+                <Star
+                  key={i}
+                  size={20}
+                  className="fill-accent-gold text-accent-gold"
+                />
+              ))}
+            </div>
+          </div>
+          <span className="text-white/60 text-sm">Được đánh giá 5 trên 5</span>
         </motion.div>
       </div>
 
@@ -44,7 +98,7 @@ export const Hero = () => {
       <motion.div
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 2, repeat: Infinity }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 text-white/50"
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 text-white/50 z-20"
       >
         <ChevronDown size={32} />
       </motion.div>

@@ -1,11 +1,11 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #000000;
-  --color-secondary-dark: #111111;
-  --color-secondary-light: #F5F5F5;
-  --color-secondary-medium: #888888;
-  --color-accent-gold: #C6A96B;
+  --color-primary: #FFFFFF;
+  --color-secondary-dark: #F8F8F8;
+  --color-secondary-light: #FFFFFF;
+  --color-secondary-medium: #666666;
+  --color-accent-gold: #D4AF37;
 
   --font-heading: "Montserrat", "Poppins", sans-serif;
   --font-body: "Inter", sans-serif;
@@ -15,11 +15,16 @@
 
 @layer base {
   body {
-    @apply bg-black text-white font-body antialiased;
+    @apply bg-white text-gray-900 font-body antialiased;
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-heading uppercase tracking-[0.05em];
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading uppercase tracking-[0.05em] text-gray-900;
   }
 }
 

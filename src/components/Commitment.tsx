@@ -1,61 +1,91 @@
 import React from "react";
 import { motion } from "motion/react";
-import { ShieldCheck, Zap, Heart, Target, Star } from "lucide-react";
+import { Lightbulb, ThumbsUp, Grid3x3, Video, Zap, Shield } from "lucide-react";
 
 const commitments = [
   {
-    icon: <ShieldCheck size={40} className="text-accent-gold" />,
-    title: "Chất lượng",
-    description: "Cam kết chất lượng cao nhất trong từng sản phẩm.",
+    icon: <Zap size={48} className="text-accent-gold" />,
+    title: "Sáng tạo không giới hạn",
+    description: "ME Creative theo đuổi tư duy mở – nơi mọi ý tưởng đều được bứt phá, không khuôn mẫu, không rào cản.",
   },
   {
-    icon: <Zap size={40} className="text-accent-gold" />,
-    title: "Tốc độ",
-    description: "Đảm bảo tiến độ và phản hồi nhanh chóng.",
+    icon: <Lightbulb size={48} className="text-accent-gold" />,
+    title: "Khác biệt đến từ bản sắc riêng",
+    description: "Chúng tôi khai thác chiều sâu văn hóa, cảm xúc và cá tính thương hiệu riêng có để tạo ra sự khác biệt bền vững.",
   },
   {
-    icon: <Heart size={40} className="text-accent-gold" />,
-    title: "Tận tâm",
-    description: "Lắng nghe và thấu hiểu nhu cầu của khách hàng.",
+    icon: <ThumbsUp size={48} className="text-accent-gold" />,
+    title: "Tư duy tổng thể - Giải pháp trọn vẹn",
+    description: "ME Creative biến ý tưởng thành giá trị thực – bằng tư duy chiến lược vững vàng và quy trình sản xuất chuyên nghiệp.",
   },
   {
-    icon: <Target size={40} className="text-accent-gold" />,
-    title: "Hiệu quả",
-    description: "Mang lại giá trị thực tế cho doanh nghiệp.",
+    icon: <Grid3x3 size={48} className="text-accent-gold" />,
+    title: "Nghệ thuật là ngôn ngữ kết nối",
+    description: "Chúng tôi kể câu chuyện thương hiệu bằng hình ảnh, cảm xúc và trải nghiệm mang tính nghệ thuật.",
   },
   {
-    icon: <Star size={40} className="text-accent-gold" />,
-    title: "Sáng tạo",
-    description: "Luôn đổi mới và dẫn đầu xu hướng.",
+    icon: <Video size={48} className="text-accent-gold" />,
+    title: "Thấu hiểu - Linh hoạt - Hiệu quả",
+    description: "Chúng tôi lắng nghe và thấu hiểu từng mong muốn của khách hàng, linh hoạt thích ứng để mang lại hiệu quả tối ưu.",
   },
 ];
 
 export const Commitment = () => {
   return (
-    <section id="commitment" className="py-28 px-6 bg-secondary-dark">
+    <section id="commitment" className="py-28 px-6 bg-white">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-20">
-          <h2 className="text-accent-gold text-sm font-bold tracking-widest uppercase mb-4">Cam kết</h2>
-          <h3 className="text-4xl md:text-6xl font-heading font-bold">GIÁ TRỊ <span className="text-accent-gold">CỐT LÕI</span></h3>
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
-          {commitments.map((item, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="text-center p-8 bg-black rounded-xl border border-white/5 hover:border-accent-gold/30 transition-all duration-300"
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+          {/* Left Section */}
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="lg:col-span-3 mt-8"
+          >
+            <h2 className="text-5xl md:text-6xl font-heading font-bold text-gray-900 mb-12">
+              Cam Kết
+            </h2>
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="flex items-center space-x-3 px-8 py-4 bg-blue-500 text-white rounded-full font-bold tracking-widest hover:bg-blue-600 transition-all duration-300 group"
             >
-              <div className="flex justify-center mb-6">{item.icon}</div>
-              <h4 className="text-lg font-heading font-bold mb-4">{item.title}</h4>
-              <p className="text-secondary-medium text-sm font-body leading-relaxed">
-                {item.description}
-              </p>
-            </motion.div>
-          ))}
+              <span>NHẬN BÁO GIÁ</span>
+              <motion.span
+                animate={{ x: [0, 5, 0] }}
+                transition={{ duration: 1.5, repeat: Infinity }}
+              >
+                →
+              </motion.span>
+            </motion.button>
+          </motion.div>
+
+          {/* Right Section - Commitments Grid */}
+          <div className="lg:col-span-9">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {commitments.map((item, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="group p-8 bg-gray-50 rounded-lg border border-gray-200 hover:border-accent-gold/50 hover:shadow-lg hover:bg-white transition-all duration-300"
+                >
+                  <div className="mb-6 group-hover:scale-110 transition-transform duration-300">
+                    {item.icon}
+                  </div>
+                  <h4 className="text-xl font-heading font-bold mb-4 text-gray-900 leading-tight">
+                    {item.title}
+                  </h4>
+                  <p className="text-gray-600 text-sm font-body leading-relaxed">
+                    {item.description}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>

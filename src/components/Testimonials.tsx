@@ -27,12 +27,12 @@ export const Testimonials = () => {
   const prev = () => setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
 
   return (
-    <section id="testimonials" className="py-28 px-6 bg-black overflow-hidden">
+    <section id="testimonials" className="py-28 px-6 bg-gray-50 border-t border-b border-gray-200 overflow-hidden\">
       <div className="max-w-5xl mx-auto relative">
         <div className="text-center mb-16">
           <Quote size={60} className="text-accent-gold/20 mx-auto mb-8" />
           <h2 className="text-accent-gold text-sm font-bold tracking-widest uppercase mb-4">Khách hàng nói gì</h2>
-          <h3 className="text-4xl md:text-6xl font-heading font-bold">LỜI <span className="text-accent-gold">KHẲNG ĐỊNH</span></h3>
+          <h3 className="text-4xl md:text-6xl font-heading font-bold text-gray-900">LỜI <span className="text-accent-gold">KHẲNG ĐỊNH</span></h3>
         </div>
 
         <div className="relative h-[400px] md:h-[300px]">
@@ -45,11 +45,11 @@ export const Testimonials = () => {
               transition={{ duration: 0.5 }}
               className="absolute inset-0 flex flex-col items-center justify-center text-center"
             >
-              <p className="text-2xl md:text-3xl font-body text-secondary-light italic leading-relaxed mb-10 max-w-3xl">
+              <p className="text-2xl md:text-3xl font-body text-gray-700 italic leading-relaxed mb-10 max-w-3xl">
                 "{testimonials[currentIndex].text}"
               </p>
               <div>
-                <h4 className="text-xl font-heading font-bold text-white mb-1">
+                <h4 className="text-xl font-heading font-bold text-gray-900 mb-1">
                   {testimonials[currentIndex].name}
                 </h4>
                 <p className="text-accent-gold text-sm font-bold tracking-widest uppercase">
@@ -64,13 +64,13 @@ export const Testimonials = () => {
         <div className="flex justify-center space-x-6 mt-12">
           <button
             onClick={prev}
-            className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white hover:bg-accent-gold hover:text-black transition-all duration-300"
+            className="w-12 h-12 rounded-full border border-gray-300 flex items-center justify-center text-gray-600 hover:bg-accent-gold hover:text-white transition-all duration-300"
           >
             <ChevronLeft size={24} />
           </button>
           <button
             onClick={next}
-            className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white hover:bg-accent-gold hover:text-black transition-all duration-300"
+            className="w-12 h-12 rounded-full border border-gray-300 flex items-center justify-center text-gray-600 hover:bg-accent-gold hover:text-white transition-all duration-300"
           >
             <ChevronRight size={24} />
           </button>

@@ -27,11 +27,11 @@ const services = [
 
 export const Services = () => {
   return (
-    <section id="services" className="py-28 px-6 bg-secondary-dark">
+    <section id="services" className="py-28 px-6 bg-gray-50">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-20">
           <h2 className="text-accent-gold text-sm font-bold tracking-widest uppercase mb-4">Dịch vụ</h2>
-          <h3 className="text-4xl md:text-6xl font-heading font-bold">GIẢI PHÁP <span className="text-accent-gold">TOÀN DIỆN</span></h3>
+          <h3 className="text-4xl md:text-6xl font-heading font-bold text-gray-900">GIẢI PHÁP <span className="text-accent-gold">TOÀN DIỆN</span></h3>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -42,12 +42,12 @@ export const Services = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              whileHover={{ scale: 1.05, boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.5)" }}
-              className="bg-black p-10 rounded-xl border border-white/5 hover:border-accent-gold/30 transition-all duration-300"
+              whileHover={{ scale: 1.05, boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1)" }}
+              className="bg-white p-10 rounded-xl border border-gray-200 hover:border-accent-gold/50 hover:shadow-lg transition-all duration-300"
             >
               <div className="mb-6">{service.icon}</div>
-              <h4 className="text-xl font-heading font-bold mb-4">{service.title}</h4>
-              <p className="text-secondary-medium font-body leading-relaxed">
+              <h4 className="text-xl font-heading font-bold mb-4 text-gray-900">{service.title}</h4>
+              <p className="text-gray-600 font-body leading-relaxed">
                 {service.description}
               </p>
             </motion.div>
