@@ -3,6 +3,7 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
 import { ProjectDetail } from "./components/ProjectDetail";
+import { ServiceDetail } from "./components/ServiceDetail";
 import { Hero } from "./components/Hero";
 import { About } from "./components/About";
 import { Services } from "./components/Services";
@@ -15,13 +16,15 @@ import { Testimonials } from "./components/Testimonials";
 export default function App() {
   const location = useLocation();
   const isProjectDetail = location.pathname.startsWith("/project/");
+  const isServiceDetail = location.pathname.startsWith("/service/");
 
-  if (isProjectDetail) {
+  if (isProjectDetail || isServiceDetail) {
     return (
       <div className="min-h-screen bg-white text-gray-900 selection:bg-accent-gold selection:text-white">
         <Navbar />
         <Routes>
           <Route path="/project/:id" element={<ProjectDetail />} />
+          <Route path="/service/:id" element={<ServiceDetail />} />
         </Routes>
         <Footer />
       </div>
